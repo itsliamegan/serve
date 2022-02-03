@@ -1,0 +1,33 @@
+fileserver
+==========
+
+Make a directory and its descendants available via HTTP.
+
+Usage - CLI
+-----------
+
+	$ serve            # serve the current directory on port 4000
+	$ serve -port 3000 # serve the current directory on port 3000
+	$ serve documents/ # serve the "documents/" directory on port 4000
+
+Run `serve -h` for more information.
+
+Usage - Go
+----------
+
+	package main
+
+	import (
+		"github.com/itsliamegan/serve"
+	)
+
+	func main() {
+		serve.Start(".", ":4000")
+	}
+
+Installation
+------------
+
+1. `git clone` the repository
+2. Run `make` in the repository's directory
+3. Use the newly-created `serve` binary
